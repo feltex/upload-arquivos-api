@@ -36,7 +36,7 @@ public class UploadArquivoController {
             return new ResponseEntity<>("{ \"mensagem\": \"Arquivo carregado com sucesso!\"}", HttpStatus.OK);
         } catch (Exception e) {
             log.error("Erro ao processar arquivo", e);
-            return new ResponseEntity<>("{ \"mensagem\": \"Erro ao carregar o arquivo!\"}", HttpStatus.OK);
+            return new ResponseEntity<>("{ \"mensagem\": \"Erro ao carregar o arquivo!\"}", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
